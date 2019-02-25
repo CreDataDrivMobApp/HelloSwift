@@ -11,7 +11,13 @@ In this workshop, we will go through some of the basic language features of Swif
 
 Swift combines multiple programming paradigms and gives you the flexibility to choose whatever paradigm for your application development.
 
+---
+
+<img align="left" src="https://github.com/CreDataDrivMobApp/HelloSwift/blob/master/Media.xcassets/warn.imageset/warn.png?raw=true" width="24" alt="github">
+
 **Recommended -** cover all of the topics in `/playgrounds`  before attemping the tasks
+
+---
 
 Once you're comfortable with the topics above go `helloswift/main.swift` to complete the tasks
 
