@@ -5,14 +5,19 @@
  That said, in this workshop we will cover some of the unique langauge featuers provided by Swift
  1. Type Inference
  2. Built in support for Optionals
- 3. Functions and Extensions
- 4. Closures
- 5. Protocols
+ 3. Value/Reference types
+ 4. Functions and Extensions
+ 5. Closures
+ 6. Guards
+ 7. Protocols
  */
 
 import Foundation
 
-//: Swift can be both statically and dynamically typed
+/*:
+ ### 1. Type Inference
+ Swift can be both statically and dynamically typed
+ */
 var str = "Hello, playground"
 var int = 1
 var typed: String = "Hello, typed variable"
@@ -23,7 +28,10 @@ func getSomething() -> Int {
 }
 var something = getSomething()
 
-//: Swift has support for optionals baked into the language
+/*:
+ ### 2. Optionals
+ Swift has support for optionals baked into the language
+*/
 var optionalName: String? = nil
 var explicitOptionalName: Optional<String> = nil
 
@@ -40,8 +48,9 @@ var defaultName = optionalName ?? "steve"
  */
 var optionalProperties = optionalName?.count
 
-/*: Amongst many others, structs and classes are the most common ways to structure your data
- - Note: structs are value types and classes are reference types
+/*:
+ ### 3. Value and Reference types
+ Swift provides structs and classes to structure your data. Structs are **value** types and classes are **reference** types
  */
 
 struct StructName {
@@ -78,7 +87,10 @@ var mutableClassName = ClassName(first: "John", middle: nil, last: "Doe")
 immutableClassName.last = "Darren"
 mutableClassName.last = "Darren"
 
-/*: With swift, functions are considered first-class citizens, i.e functions can live outside of a class/singleton definition
+
+/*:
+ ### 4. Functions and Extentions
+ With swift, functions are considered first-class citizens, i.e functions can live outside of a class/singleton definition
  */
 
 func getName() -> String {
@@ -99,7 +111,9 @@ extension ClassName {
 
 immutableClassName.fullName()
 
-/*: Closures are self-contained functions that are defined only with the arguments and returns
+/*:
+ ### 5. Closures
+ Closures are self-contained functions that are defined only with the arguments and returns
  - Note: Closures are commonly known as blocks / lamdas in other programming languages
  */
 var checkAgeClosure: (Int) -> Bool = { (age) in age > 18 }
@@ -124,3 +138,36 @@ func printIfNameIsShort(name: ClassName, condition: (Int) -> Bool){
  */
 printIfNameIsShort(name: shortName, condition: checkNameLengthClosure)
 printIfNameIsShort(name: shortName) { (length) -> Bool in length > 3 }
+
+/*:
+ ### 5. Guards
+ guard are a type of control structures that helps control flow out of the block - if one or more conditions aren’t met.
+ - Note: This is similar to a `if` then `throw`/`return`
+ */
+
+func printIfValid(name:String){
+    guard name.count < 4 || name.count > 5 else {
+        print("\(name) is not valid")
+        return
+    }
+    
+    print("\(name) is valid")
+}
+
+printIfValid(name: "Steven")
+
+//: Guards are often used to type cast objects on runtime, to break out of scope if the given conditions are not met
+func printValidNames(first:String?, last:String?){
+    guard
+        let first = first,
+        let last = last
+        else {
+            print("invalid name")
+            return
+            
+    }
+    print("\(first) \(last) is valid")
+}
+
+printValidNames(first: "Steve", last: nil)
+printValidNames(first: "Steve", last: "Rogers")
