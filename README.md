@@ -1,6 +1,6 @@
 # helloSwift! 
 
-<img align="right" src="https://github.com/CreDataDrivMobApp/HelloSwift/blob/master/Media.xcassets/swift.imageset/swift.png?raw=true" width="250" alt="swift-logo">
+<img align="right" src="https://github.com/CreDataDrivMobApp/HelloSwift/blob/master/Media.xcassets/swift.imageset/swift.png?raw=true" width="200" alt="swift-logo">
 
 In this workshop, we will go through some of the basic language features of Swift
 

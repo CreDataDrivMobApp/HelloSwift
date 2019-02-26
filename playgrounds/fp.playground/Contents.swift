@@ -62,7 +62,7 @@ func mainThread() {
 
 /*:
  ### Pure/Stateless functions
- In the [previous](@previous) section we learned `Functions` - which simply may takes 0 or values (parameters) and return 0 or more values (return values)
+ In the previous section we learned `Functions` - which simply may takes 0 or values (parameters) and return 0 or more values (return values)
  
  `Pure functions` are functions that doesn't **mutate** any values outside of the defined scope
  */
