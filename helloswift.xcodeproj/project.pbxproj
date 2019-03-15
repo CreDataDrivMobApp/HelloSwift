@@ -34,6 +34,7 @@
 		E66DFAFE21F8560E00E97818 /* testHelloSwift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testHelloSwift.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66DFB0021F8560E00E97818 /* testHelloSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testHelloSwift.swift; sourceTree = "<group>"; };
 		E66DFB0221F8560E00E97818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6AD785A223C61C9006B2C91 /* task.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = task.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E6D387972223DACD00BA629F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E6D387982223DEB800BA629F /* workshop.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = workshop.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -59,6 +60,7 @@
 		E66DFAE121F846A800E97818 = {
 			isa = PBXGroup;
 			children = (
+				E6AD785A223C61C9006B2C91 /* task.playground */,
 				E6D387972223DACD00BA629F /* Media.xcassets */,
 				E66DFAF621F84B9000E97818 /* playgrounds */,
 				E66DFAF421F84A0B00E97818 /* README.md */,
